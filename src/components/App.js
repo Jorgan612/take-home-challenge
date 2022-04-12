@@ -1,9 +1,21 @@
+import React, { Component } from 'react';
 import '../css/App.css';
 import StoryContainer from './StoryContainer';
 
-const App = () => {
-  return (
-    <div className='app-div'>
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+
+  componentDidMount() {
+    
+  }
+
+  render() {
+   return ( <div className='app-div'>
       <nav className='app-top-nav'>
         <h1 className='nav-title'>Top Stories</h1>
         <div className='sort-button-div'>
@@ -12,7 +24,8 @@ const App = () => {
       </nav>
       <StoryContainer />
     </div>
-  )
+   )
+  }
 }
 
 export default App;
