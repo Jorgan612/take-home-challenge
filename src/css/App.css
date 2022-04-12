@@ -22,7 +22,7 @@ html {
   font-size: 40px;
 }
 
-.sort-button-div {
+.filter-div {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

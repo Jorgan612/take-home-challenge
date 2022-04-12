@@ -1,16 +1,17 @@
 import '../css/Story.css';
 
 
-const Story = ({img, title, abstract, publishedDate}) => {
+const Story = ({img, title, abstract, url}) => {
   return (
-    <div className="story-card">
-      <img className='story-thumbnail' src={img.url} alt='thumbnail'/>
-      <div className='story-title-abstact-div'>
-        <h1>{title}</h1>
-        <p>{abstract}</p>
-        {/* <p>{publishedDate}</p> */}
-      </div>
-    </div>
+      <a className='story-anchor-tag' href={url}>
+        <div className="story-card">
+            <img className='story-thumbnail' src={img.url} alt='thumbnail'/>
+            <div className='story-title-abstact-div'>
+              <h1>{title}</h1>
+              <p>{abstract}</p>
+            </div>
+        </div>
+      </a>
   )
 }
 

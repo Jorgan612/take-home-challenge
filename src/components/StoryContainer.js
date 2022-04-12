@@ -10,6 +10,7 @@ const StoryContainer = ({stories}) => {
         title={story.title}
         abstract={story.abstract}
         publishedDate={story.published_date}
+        url={story.url}
         key={story.title}
       />
     )

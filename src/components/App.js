@@ -22,7 +22,7 @@ class App extends Component {
    return ( <div className='app-div'>
       <nav className='app-top-nav'>
         <h1 className='nav-title'>Top Stories</h1>
-        <div className='sort-button-div'>
+        <div className='filter-div'>
           <input className='input-field' type='text' placeholder='Search By Title' />
         </div>
       </nav>
