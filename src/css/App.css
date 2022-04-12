@@ -30,7 +30,9 @@ html {
   padding: 20px;
 }
 
-.sort-button {
-  height: 30%;
-  width: 20%;
+.input-field {
+  height: 40%;
+  width: 60%;
+  border-radius: 20px;
+  padding-left: 20px;
 }

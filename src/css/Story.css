@@ -1,0 +1,30 @@
+.story-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 60%;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #F0F0F0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.story-card:hover {
+  transition: .5s;
+  transform: scale(1.1);
+}
+
+.story-thumbnail {
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.story-title-abstact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}

@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      stories: []
+      stories: [],
+      searchPhrase: ''
     }
   }
 
@@ -21,7 +22,7 @@ class App extends Component {
       <nav className='app-top-nav'>
         <h1 className='nav-title'>Top Stories</h1>
         <div className='sort-button-div'>
-          <button className='sort-button'>Sort by...</button>
+          <input className='input-field' type='text' placeholder='Search By Title' />
         </div>
       </nav>
       <StoryContainer stories={this.state.stories}/>

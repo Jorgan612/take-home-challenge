@@ -1,4 +1,8 @@
 .story-container-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 85%;
-  border: 5px solid orange;
+  overflow-y: scroll;
 }
