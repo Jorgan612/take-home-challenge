@@ -1,9 +1,16 @@
 import '../css/App.css';
+import StoryContainer from './StoryContainer';
 
 const App = () => {
   return (
     <div className='app-div'>
-      <h1>Top Stories</h1>
+      <nav className='app-top-nav'>
+        <h1 className='nav-title'>Top Stories</h1>
+        <div className='sort-button-div'>
+          <button className='sort-button'>Sort by...</button>
+        </div>
+      </nav>
+      <StoryContainer />
     </div>
   )
 }
