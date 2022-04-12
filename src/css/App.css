@@ -1,0 +1,36 @@
+html {
+  margin: 0px;
+}
+
+.app-div {
+  height: 100vh;
+}
+
+.app-top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  height: 15%;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.sort-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  padding: 20px;
+}
+
+.sort-button {
+  height: 30%;
+  width: 20%;
+}
