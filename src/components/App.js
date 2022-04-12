@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import '../css/App.css';
 import StoryContainer from './StoryContainer';
 import { getHomeStories } from '../apiCalls';
@@ -26,6 +27,9 @@ class App extends Component {
         </div>
       </nav>
       <StoryContainer stories={this.state.stories}/>
+      {/* <Routes>
+        <Route path='/details' element={<StoryDetails />}
+      </Routes> */}
     </div>
    )
   }
