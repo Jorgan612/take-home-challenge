@@ -6,7 +6,6 @@ const StoryContainer = ({stories}) => {
   const homePageStories = stories.map((story) => {
     return (
       <Story
-        img={story.multimedia[2]}
         title={story.title}
         abstract={story.abstract}
         publishedDate={story.published_date}

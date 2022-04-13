@@ -14,6 +14,7 @@
 
 .story-card {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 90%;
@@ -25,20 +26,9 @@
 
 .story-card:hover,
  .story-anchor-tag:hover {
-  transition: .5s;
+  transition: .7s;
   transform: scale(1.1);
   border: 3px solid #686868;
 }
 
-.story-thumbnail {
-  border-radius: 20px;
-  margin-right: 10px;
-}
 
-.story-title-abstact-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}

@@ -9,17 +9,27 @@ class App extends Component {
     super();
     this.state = {
       stories: [],
-      searchPhrase: ''
+      searchPhrase: '',
+      filteredArticle: []
     }
   }
 
   componentDidMount() {
     getHomeStories()
-    .then(data => this.setState({stories: data.results}))
+    .then(data => this.setState({stories: [...data.results]}))
   } 
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+    this.searchTitle(this.state.searchPhrase)
+  }
+
+  searchTitle(search) {
+    const searchedTitle = this.state.stories.filter((story) => {
+      const lowerCaseTitle = story.title.toLowerCase()
+      return lowerCaseTitle.includes(search.toLowerCase())
+    })
+    this.setState({filteredArticle: searchedTitle})
   }
 
   render() {
@@ -30,7 +40,7 @@ class App extends Component {
           <input className='input-field' type='text' name='searchPhrase' value={this.state.searchPhrase} placeholder='Search By Title' onChange={event => this.handleChange(event)} />
         </div>
       </nav>
-      <StoryContainer stories={this.state.stories}/>
+      {this.state.filteredArticle.length > 0 ? <StoryContainer stories={this.state.filteredArticle} /> : <StoryContainer stories={this.state.stories}/>}
       {/* <Routes>
         <Route path='/details' element={<StoryDetails />}
       </Routes> */}

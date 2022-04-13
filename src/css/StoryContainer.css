@@ -1,9 +1,8 @@
 .story-container-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 5100px;
+  padding-top: 50px;
   height: 85%;
   overflow-y: scroll;
 }
