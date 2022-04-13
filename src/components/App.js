@@ -7,24 +7,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      stories: []
+      stories: [],
+      searchPhrase: '',
+      filteredArticle: []
     }
   }
 
   componentDidMount() {
     getHomeStories()
-    .then(data => this.setState({stories: data.results}))
+    .then(data => this.setState({stories: [...data.results]}))
+    .catch(error => console.log(error))
   } 
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+    this.searchTitle(this.state.searchPhrase)
+  }
+
+  searchTitle(search) {
+    const searchedTitle = this.state.stories.filter((story) => {
+      const lowerCaseTitle = story.title.toLowerCase()
+      return lowerCaseTitle.includes(search.toLowerCase())
+    })
+    this.setState({filteredArticle: searchedTitle})
+  }
 
   render() {
    return ( <div className='app-div'>
       <nav className='app-top-nav'>
         <h1 className='nav-title'>Top Stories</h1>
-        <div className='sort-button-div'>
-          <button className='sort-button'>Sort by...</button>
+        <div className='filter-div'>
+          <input className='input-field' type='text' name='searchPhrase' value={this.state.searchPhrase} placeholder='Search By Title' onChange={event => this.handleChange(event)} />
         </div>
       </nav>
-      <StoryContainer stories={this.state.stories}/>
+      {this.state.filteredArticle.length > 0 ? <StoryContainer stories={this.state.filteredArticle} /> : <StoryContainer stories={this.state.stories}/>}
     </div>
    )
   }

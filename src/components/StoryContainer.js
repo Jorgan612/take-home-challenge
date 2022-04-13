@@ -3,13 +3,14 @@ import '../css/StoryContainer.css';
 
 
 const StoryContainer = ({stories}) => {
-  console.log('stories prop in storycontainer ----', stories)
   const homePageStories = stories.map((story) => {
     return (
       <Story
         title={story.title}
         abstract={story.abstract}
         publishedDate={story.published_date}
+        url={story.url}
+        key={story.title}
       />
     )
   }) 

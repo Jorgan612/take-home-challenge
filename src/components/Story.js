@@ -1,11 +1,14 @@
+import '../css/Story.css';
 
-const Story = ({title, abstract, publishedDate}) => {
+
+const Story = ({title, abstract, url}) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{abstract}</p>
-      <p>{publishedDate}</p>
-    </div>
+      <a className='story-anchor-tag' href={url} target="_blank" rel='noreferrer'>
+        <div className="story-card">
+              <h1>{title}</h1>
+              <p>{abstract}</p>
+        </div>
+      </a>
   )
 }
 
