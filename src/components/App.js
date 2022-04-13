@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Routes, Route } from 'react-router-dom';
 import '../css/App.css';
 import StoryContainer from './StoryContainer';
 import { getHomeStories } from '../apiCalls';
@@ -17,6 +16,7 @@ class App extends Component {
   componentDidMount() {
     getHomeStories()
     .then(data => this.setState({stories: [...data.results]}))
+    .catch(error => console.log(error))
   } 
 
   handleChange = (event) => {
@@ -41,9 +41,6 @@ class App extends Component {
         </div>
       </nav>
       {this.state.filteredArticle.length > 0 ? <StoryContainer stories={this.state.filteredArticle} /> : <StoryContainer stories={this.state.stories}/>}
-      {/* <Routes>
-        <Route path='/details' element={<StoryDetails />}
-      </Routes> */}
     </div>
    )
   }
