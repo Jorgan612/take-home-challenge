@@ -18,12 +18,16 @@ class App extends Component {
     .then(data => this.setState({stories: data.results}))
   } 
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
   render() {
    return ( <div className='app-div'>
       <nav className='app-top-nav'>
         <h1 className='nav-title'>Top Stories</h1>
         <div className='filter-div'>
-          <input className='input-field' type='text' placeholder='Search By Title' />
+          <input className='input-field' type='text' name='searchPhrase' value={this.state.searchPhrase} placeholder='Search By Title' onChange={event => this.handleChange(event)} />
         </div>
       </nav>
       <StoryContainer stories={this.state.stories}/>
