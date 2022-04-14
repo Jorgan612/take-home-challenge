@@ -21,15 +21,15 @@ class App extends Component {
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-    this.searchTitle(this.state.searchPhrase)
+    this.searchTitle(this.state.searchPhrase);
   }
 
   searchTitle(search) {
     const searchedTitle = this.state.stories.filter((story) => {
-      const lowerCaseTitle = story.title.toLowerCase()
-      return lowerCaseTitle.includes(search.toLowerCase())
+      const lowerCaseTitle = story.title.toLowerCase();
+      return lowerCaseTitle.includes(search.toLowerCase());
     })
-    this.setState({filteredArticle: searchedTitle})
+    this.setState({filteredArticle: searchedTitle});
   }
 
   render() {
