@@ -6,19 +6,19 @@
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 
 
 ## Abstract
-	This assignment was meant to simulate a take home challenge. The goal was to complete the task in 8 hours or less to demonstrate my abilities in creating a web application. 
+This assignment was meant to simulate a take home challenge. The goal was to complete the task in 8 hours or less to demonstrate my abilities in creating a web application. 
 
 ## Technologies
   - React.js
   - VS Code
-	- API: New York Times Top Stories
+  - API: New York Times Top Stories
 
 ## Illustrations
 
@@ -34,12 +34,12 @@
   - [Jessica Organ](https://gist.github.com/Jorgan612)
 
 ## Wins
-	- Designing a user friendly layout to navigate to different top articles from the New York Times. 
-	- Implenting search functionality to search for keywords within article titles. 
+  - Designing a user friendly layout to navigate to different top articles from the New York Times. 
+  - Implenting search functionality to search for keywords within article titles. 
 
 ## Challenges + Improvements
-	- Implementing the API initially.
-	- Future Iterations:
+  - Implementing the API initially.
+  - Future Iterations:
     - Cypress testing.
     - Additional search functionality such as searching by different categories.
 
